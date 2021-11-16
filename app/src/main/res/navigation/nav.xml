@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.colorblindtest.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_questionFragment3"
+            app:destination="@id/questionFragment3" />
+        <action
+            android:id="@+id/action_homeFragment_to_rankingFragment2"
+            app:destination="@id/rankingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/winFragment"
+        android:name="com.example.colorblindtest.WinFragment"
+        android:label="fragment_win"
+        tools:layout="@layout/fragment_win" >
+        <action
+            android:id="@+id/action_winFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_winFragment_to_falseAnswerListFragment"
+            app:destination="@id/falseAnswerListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/questionFragment3"
+        android:name="com.example.colorblindtest.QuestionFragment"
+        android:label="QuestionFragment" >
+        <action
+            android:id="@+id/action_questionFragment3_to_winFragment"
+            app:destination="@id/winFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/falseAnswerListFragment"
+        android:name="com.example.colorblindtest.FalseAnswerListFragment"
+        android:label="FalseAnswerListFragment" />
+    <fragment
+        android:id="@+id/rankingFragment"
+        android:name="com.example.colorblindtest.RankingFragment"
+        android:label="RankingFragment" />
+</navigation>
